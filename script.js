@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let score = 0;
 
-    loadQuiz();
+    load_quiz();
 
 
 
-    function loadQuiz() {
+    function load_quiz() {
 
        deselect_answers();
        const current_quiz_data = quiz_data[current_quiz];
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         current_quiz++;
 
         if (current_quiz < quiz_data.length) {
-            loadQuiz();
+            load_quiz();
         } else {
             quiz.innerHTML = `<h2>You answered correctly at ${score}/${quiz_data.length} questions.</h2> <button onclick="location.reload()">Reload</button>`;
         }
